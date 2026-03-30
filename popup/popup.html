@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Extension</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <img src="../icons/icon32.png" alt="Logo" class="logo" />
+      <h1 class="title">My Extension</h1>
+    </header>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">Loading...</span>
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+
+      <!-- Toggle feature -->
+      <div class="row">
+        <div class="row-label">
+          <span class="row-title">Enable feature</span>
+          <span class="row-desc">Activate on all pages</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="featureToggle" />
+          <span class="toggle-track"></span>
+        </label>
+      </div>
+
+      <!-- Input setting -->
+      <div class="field">
+        <label class="field-label" for="customInput">Custom value</label>
+        <input
+          type="text"
+          id="customInput"
+          class="field-input"
+          placeholder="Enter something..."
+        />
+      </div>
+
+      <!-- Action button -->
+      <button class="btn btn-primary" id="actionBtn">
+        Run action
+      </button>
+
+      <!-- Secondary button -->
+      <button class="btn btn-secondary" id="clearBtn">
+        Clear settings
+      </button>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>v1.0.0</span>
+      <a href="#" id="settingsLink">Settings</a>
+    </footer>
+
+  </div>
+
+  <script src="../utils/utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
